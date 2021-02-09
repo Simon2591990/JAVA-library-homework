@@ -27,7 +27,17 @@ public class LibraryTest {
     }
     @Test
     public void hasBookCapacity(){
-        assertEquals(10, library.getBookCapacity());
+        assertEquals(5, library.getBookCapacity());
+    }
+    @Test
+    public void cantExceedBookCapacity(){
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        assertEquals(5, library.getNumberOfBooks());
     }
 
 
