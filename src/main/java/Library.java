@@ -20,8 +20,11 @@ public class Library {
         this.bookCollection.add(book);
     }
     }
-
     public int getBookCapacity() {
         return this.bookCapacity;
+    }
+
+    public void removeBook(Book book) {
+        this.bookCollection.remove(book);
     }
 }
