@@ -16,5 +16,8 @@ public class BookTest {
         assertEquals("Harry Potter", book.getName());
     }
 
-
+    @Test
+    public void hasAuthor() {
+        assertEquals("JK Rowling", book.getAuthor());
+    }
 }
