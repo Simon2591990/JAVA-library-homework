@@ -9,12 +9,13 @@ public class LibraryTest {
 
     private Library library;
     private Book book;
+    private Book book2;
 
     @Before
     public void before(){
         library = new Library();
         book = new Book("Harry Potter", "JK Rowling", "fantasy");
-
+        book2 = new Book("Charlotte's Web", "E.B. White", "childrens");
     }
     @Test
     public void bookCollectionStartsAtZero(){
@@ -33,9 +34,9 @@ public class LibraryTest {
     public void cantExceedBookCapacity(){
         library.addBook(book);
         library.addBook(book);
-        library.addBook(book);
-        library.addBook(book);
-        library.addBook(book);
+        library.addBook(book2);
+        library.addBook(book2);
+        library.addBook(book2);
         library.addBook(book);
         assertEquals(5, library.getNumberOfBooks());
     }
