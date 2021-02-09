@@ -22,7 +22,6 @@ public class Library {
         if (this.bookCollection.size() < this.bookCapacity){
         this.bookCollection.add(book);
         this.genres.merge(book.getGenre(), 1, Integer::sum);
-            System.out.println(genres);
 
 
 
@@ -35,5 +34,9 @@ public class Library {
 
     public void removeBook(Book book) {
         this.bookCollection.remove(book);
+    }
+
+    public int getNumberOfBooksOfGenre(String genre) {
+        return this.genres.get(genre);
     }
 }

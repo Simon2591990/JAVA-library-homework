@@ -37,6 +37,7 @@ public class BorrowerTest {
         library.addBook(book);
         library.addBook(book2);
         borrower.borrowBook(book, library);
+        assertEquals(2, library.getNumberOfBooksOfGenre("fantasy"));
 
 
     }
